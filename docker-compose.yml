@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
     web:
@@ -8,8 +8,10 @@ services:
         volumes:
             - ./:/app
         networks:
-            - postgres-compose-network
-    teste-postgres-compose:
+            ip:
+                ipv4_address: 172.16.239.10
+                ipv6_address: 2001:3984:3988::10
+    postgres-compose:
         image: postgres
         environment:
             POSTGRES_PASSWORD: "laravel"
@@ -18,8 +20,14 @@ services:
         volumes:
             - /home/leonardocs/postgres:/var/lib/postgresql/data
         networks:
-            - postgres-compose-network
+            ip:
+                ipv4_address: 172.16.239.20
+                ipv6_address: 2001:3984:3988::20
 
 networks:
-    postgres-compose-network:
-        driver: bridge
+    ip:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.239.0/24
+                - subnet: "2001:3984:3988::/64"
