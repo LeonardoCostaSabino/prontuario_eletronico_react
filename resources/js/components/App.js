@@ -7,7 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import Home from "./Views/Home";
-import Example from "./Views/Example";
+import Search from "./Views/Search";
 import Admin from "./Views/Admin";
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/example">Example</Link>
+                            <Link to="/search">Search</Link>
                         </li>
                         <li>
                             <Link to="/admin">Admin</Link>
@@ -28,7 +28,7 @@ export default function App() {
                     </ul>
                 </nav>
                 <Switch>
-                    <Route path="/example">
+                    <Route path="/search">
                         <Example />
                     </Route>
                     <Route path="/">
