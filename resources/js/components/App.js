@@ -29,7 +29,7 @@ export default function App() {
                 </nav>
                 <Switch>
                     <Route path="/search">
-                        <Example />
+                        <Search />
                     </Route>
                     <Route path="/">
                         <Home />

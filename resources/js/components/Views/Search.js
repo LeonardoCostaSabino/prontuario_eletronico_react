@@ -1,7 +1,19 @@
 import React from 'react';
 
 function Search() {
-  return <h2>Search</h2>;
+    return (
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-md-8">
+                    <div className="card">
+                        <div className="card-header">Página de Pesquisa</div>
+
+                        <div className="card-body">página de pesquisa do programa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default Search;
