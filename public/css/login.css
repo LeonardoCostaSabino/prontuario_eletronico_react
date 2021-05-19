@@ -60,7 +60,6 @@ body{
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  width: 200px;;
 }
 
 .box input[type = "submit"]:hover{
@@ -72,4 +71,8 @@ a {
   text-decoration: none;
   color: white;
   font-size: 18px;
+}
+
+span {
+  color: white;
 }
