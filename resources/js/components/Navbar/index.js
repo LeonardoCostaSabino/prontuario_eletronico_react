@@ -10,9 +10,9 @@ import Home from "./Views/Home";
 import MedicalHistory from "./Views/MedicalHistory";
 import Admin from "./Views/Admin";
 
-export default function App() {
-    return (
-        <Router>
+const Navbar = () => {
+  return (
+    <Router>
             <div>
                 <nav>
                     <ul>
@@ -40,10 +40,7 @@ export default function App() {
                 </Switch>
             </div>
         </Router>
-    );
-}
+  );
+};
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+export default Navbar;
